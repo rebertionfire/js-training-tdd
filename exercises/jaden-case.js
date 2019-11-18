@@ -12,8 +12,19 @@
 
 // Your code:
 
+const jadenCase =(arr) =>{
+  arr = arr.split(" ")
+  for (let i=0;i<arr.length; i++){
+    arr[i] = arr[i][0].toUpperCase() + arr[i].slice(1).toLowerCase()
+  }
+  return arr.join(' ')
+}
+
 //* Begin of tests
 const assert = require('assert');
 
-assert.fail('You must write your own tests');
+assert.strictEqual(typeof jadenCase, 'function');
+assert.strictEqual(jadenCase('hello world'), 'Hello World');
+assert.strictEqual(jadenCase('Hello world hello world'), 'Hello World Hello World');
+
 // End of tests */

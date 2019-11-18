@@ -9,8 +9,14 @@
 
 // Your code:
 
+const whisper = (str) => {
+return str.toLowerCase()
+}
+
+
 //* Begin of tests
 const assert = require('assert');
 
-assert.fail('You must write your own tests');
+assert.strictEqual(typeof whisper, 'function');
+assert.strictEqual(whisper('HeLLo WOrld'), 'hello world');
 // End of tests */

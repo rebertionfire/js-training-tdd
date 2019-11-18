@@ -14,8 +14,28 @@
 
 // Your code:
 
+const keepFirst =(str)=>{
+  return str.slice(0,2)
+}
+
+
+const keepLast =(str)=>{
+  return str.slice(-2)
+
+}
+
+
+const keepFirstLast =(str)=>{
+  return str.slice(2,4)
+}
+
 //* Begin of tests
 const assert = require('assert');
 
-assert.fail('You must write your own tests');
-// End of tests */
+assert.strictEqual(typeof keepFirst, 'function');
+assert.strictEqual(typeof keepLast, 'function');
+assert.strictEqual(typeof keepFirstLast, 'function');
+
+assert.strictEqual(keepFirst('Hello'), 'He');
+assert.strictEqual(keepLast('Hello'), 'lo');
+assert.strictEqual(keepFirstLast('Hello'), 'll');// End of tests */

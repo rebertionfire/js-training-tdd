@@ -9,6 +9,15 @@
 
 // Your code:
 
+const repeat = (str, n) => {
+  let final = "";
+  for (let i = 0; i<n; i++){
+    final = final + str
+  }
+  return final
+}
+
+
 //* Begin of tests
 const assert = require('assert');
 

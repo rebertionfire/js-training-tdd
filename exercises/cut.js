@@ -11,9 +11,27 @@
  */
 
 // Your code:
+const cutFirst = (str) =>{
+  return str.slice(2)
+
+}
+const cutLast = (str) =>{
+  return str.slice(0,-2)
+
+}
+const cutFirstLast = (str) =>{
+  return str.slice(1,-1)
+}
+
 
 //* Begin of tests
 const assert = require('assert');
 
-assert.fail('You must write your own tests');
+assert.strictEqual(typeof cutFirst, 'function');
+assert.strictEqual(typeof cutLast, 'function');
+assert.strictEqual(typeof cutFirstLast, 'function');
+
+assert.strictEqual(cutFirst('Hello'), 'llo');
+assert.strictEqual(cutLast('Hello'), 'Hel');
+assert.strictEqual(cutFirstLast('Hello'), 'ell');
 // End of tests */

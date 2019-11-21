@@ -11,10 +11,15 @@
 
 // Your code:
 function multiply(a, b) {
-  if (!a) { return 0; }
-  return a & 1
-      ? b + multiply(a >> 1, b << 1)
-      : multiply(a >> 1, b << 1);
+  
+    if (b>0){
+    return a + multiply(a, b-1)
+  } if (b<0){
+    return -a + multiply (a, b+1)
+  }
+   return 0 
+
+
 }
 
 
@@ -28,7 +33,7 @@ assert.strictEqual(multiply.toString().includes('while'), false);
 assert.strictEqual(multiply.toString().includes('for'), false);
 assert.strictEqual(multiply.toString().includes('*'), false);
 assert.strictEqual(multiply.toString().includes('/'), false);
-assert.strictEqual(multiply(34, 78), 2652);
+assert.strictEqual(multiply(10, 5), 50);
 assert.strictEqual(multiply(123, 0), 0);
 assert.strictEqual(multiply(0, -230), 0);
 assert.strictEqual(multiply(0, 0), 0);
